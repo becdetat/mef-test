@@ -15,5 +15,20 @@ namespace Consumer
 		{
 			InitializeComponent();
 		}
+
+		private void GetNameTextBox_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void HelloWorld_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void GoodbyeCruelWorld_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

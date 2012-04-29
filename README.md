@@ -1,4 +1,4 @@
 mef-test
 ========
 
-A project to test setting up MEF
+A WinForms application that uses MEF to load some plugins.
