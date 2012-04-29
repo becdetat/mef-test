@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicHelloWorldPlugin.cs" />
+    <Compile Include="GoodbyeCruelWorldPlugin.cs" />
+    <Compile Include="HelloNamePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
