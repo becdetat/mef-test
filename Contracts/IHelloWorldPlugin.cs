@@ -7,6 +7,6 @@ namespace Contracts
 {
 	public interface IHelloWorldPlugin : IPlugin
 	{
-		string GetHelloWorldMessage();
+		string GetHelloMessage();
 	}
 }
