@@ -75,7 +75,6 @@
 			this.GetNameTextBox.Size = new System.Drawing.Size(161, 20);
 			this.GetNameTextBox.TabIndex = 1;
 			this.GetNameTextBox.Text = "Batman";
-			this.GetNameTextBox.TextChanged += new System.EventHandler(this.GetNameTextBox_TextChanged);
 			// 
 			// flowLayoutPanel1
 			// 

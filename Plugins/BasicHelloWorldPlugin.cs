@@ -10,6 +10,4 @@ namespace Plugins
 	{
 		public string GetHelloMessage() { return "Hello, world!"; }
 	}
-
-
 }

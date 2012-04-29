@@ -7,24 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Contracts;
+using System.ComponentModel.Composition;
+using System.ComponentModel.Composition.Hosting;
 
 namespace Consumer
 {
-	public partial class Form1 : Form
+	public partial class Form1 : Form, IGetName
 	{
-		IGetName _getName;
+		[ImportMany]
 		IEnumerable<IHelloWorldPlugin> _helloWorldPlugins;
+		[ImportMany]
 		IEnumerable<IGoodbyeCruelWorldPlugin> _goodbyeCruelWorldPlugins;
 
 		public Form1()
 		{
 			InitializeComponent();
+
+			var catalog = new AggregateCatalog();
+			catalog.Catalogs.Add(new AssemblyCatalog("Plugins.dll"));
+			var container = new CompositionContainer(catalog);
+			container.ComposeParts(this);
 		}
 
-		private void GetNameTextBox_TextChanged(object sender, EventArgs e)
-		{
-			((GetName)_getName).Name = GetNameTextBox.Text;
-		}
+		public string GetName() { return GetNameTextBox.Text; }
 
 		private void HelloWorld_Click(object sender, EventArgs e)
 		{
