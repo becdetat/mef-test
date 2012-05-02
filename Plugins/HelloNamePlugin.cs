@@ -9,8 +9,14 @@ namespace Plugins
 {
 	public class HelloNamePlugin : IHelloWorldPlugin
 	{
-		[Import]
-		IGetName _getName;
+		readonly IGetName _getName;
+
+		[ImportingConstructor]
+		public HelloNamePlugin(IGetName getName)
+		{
+			_getName = getName;
+		}
+
 		public string GetHelloMessage() { return string.Format("Hello, {0}!", _getName.GetName()); }
 	}
 }

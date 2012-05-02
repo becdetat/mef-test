@@ -24,6 +24,7 @@ namespace Consumer
 			InitializeComponent();
 
 			var catalog = new AggregateCatalog();
+			catalog.Catalogs.Add(new AssemblyCatalog(System.Reflection.Assembly.GetExecutingAssembly()));
 			catalog.Catalogs.Add(new AssemblyCatalog("Plugins.dll"));
 			var container = new CompositionContainer(catalog);
 			container.ComposeParts(this);
