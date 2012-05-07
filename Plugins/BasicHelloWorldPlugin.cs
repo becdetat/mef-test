@@ -6,8 +6,11 @@ using Contracts;
 
 namespace Plugins
 {
-	public class BasicHelloWorldPlugin : IHelloWorldPlugin
+	public class BasicHelloWorldPlugin : MarshalByRefObject, IHelloWorldPlugin
 	{
-		public string GetHelloMessage() { return "Hello, world!"; }
+		public string GetHelloMessage() 
+		{
+			return "Hello, world!"; 
+		}
 	}
 }

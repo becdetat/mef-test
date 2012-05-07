@@ -7,7 +7,7 @@ using System.ComponentModel.Composition;
 
 namespace Plugins
 {
-	public class HelloNamePlugin : IHelloWorldPlugin
+	public class HelloNamePlugin : MarshalByRefObject, IHelloWorldPlugin
 	{
 		readonly IGetName _getName;
 

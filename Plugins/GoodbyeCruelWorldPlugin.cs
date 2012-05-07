@@ -6,7 +6,8 @@ using Contracts;
 
 namespace Plugins
 {
-	public class GoodbyeCruelWorldPlugin : IGoodbyeCruelWorldPlugin
+	[Serializable]
+	public class GoodbyeCruelWorldPlugin : MarshalByRefObject, IGoodbyeCruelWorldPlugin
 	{
 		public string GetGoodbyeMessage() { return "Noooooooo!!!!"; }
 	}

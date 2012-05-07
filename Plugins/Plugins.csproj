@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicHelloWorldPlugin.cs" />
+    <Compile Include="RemoteHelloWorldPlugin.cs" />
     <Compile Include="GoodbyeCruelWorldPlugin.cs" />
     <Compile Include="HelloNamePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,4 +61,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="$(OutputPath)\Plugins.dll" DestinationFolder="..\Consumer\$(OutputPath)" />
+  </Target>
 </Project>

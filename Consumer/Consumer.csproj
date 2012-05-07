@@ -54,8 +54,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalHelloWorldPlugin.cs" />
+    <Compile Include="PluginComposer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafePluginComposer.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,10 +87,6 @@
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{9FC37882-3BFD-4D24-BFE9-5C98218FABA8}</Project>
       <Name>Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Plugins\Plugins.csproj">
-      <Project>{D4FCA1D8-D0F6-45AD-8E64-912006527D96}</Project>
-      <Name>Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
